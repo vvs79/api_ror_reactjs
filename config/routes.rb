@@ -6,7 +6,12 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
 
   namespace :api do
-    resources :users, only: [:index, :show, :create, :destroy, :update]
+    resources :users, only: [:index, :show, :create, :destroy, :update] do
+      get :order_by_login, on: :collection
+      get :order_by_email, on: :collection
+      get :order_by_fname, on: :collection
+      get :order_by_lname, on: :collection
+    end
   end
 
   # root 'users#index'
