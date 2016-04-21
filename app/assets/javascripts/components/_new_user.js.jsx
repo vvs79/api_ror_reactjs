@@ -17,11 +17,11 @@ var NewUser= React.createClass({
     render() {
         return (
                 <div>
-                    <input ref='login' placeholder='Enter first name' />&nbsp;
-                    <input ref='email' placeholder='Enter last name' />&nbsp;
-                    <input ref='login' placeholder='Enter login' />&nbsp;
-                    <input ref='email' placeholder='Enter email' />&nbsp;
-                    <input ref='login' placeholder='Enter password' /><br />
+                    <input type="text" ref='first_name' placeholder='Enter first name' />&nbsp;
+                    <input type="text" ref='last_name' placeholder='Enter last name' />&nbsp;
+                    <input type="text" ref='login' placeholder='Enter login' />&nbsp;
+                    <input type="email" ref='email' placeholder='Enter email' />&nbsp;
+                    <input type="password" ref='password' placeholder='Enter password' /><br />
                     <button onClick={this.handleClick}>Create user</button><br /><br />
                 </div>
 

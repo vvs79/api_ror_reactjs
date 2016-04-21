@@ -11,6 +11,8 @@ nav.navbar.navbar-default.navbar-fixed-top.topnav[role="navigation"]
     #myNavbar.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
+          li
+            = link_to 'All users (api rails)', api_users_path
           li.dropdown
             a.dropdown-toggle data-toggle="dropdown" href="#"
               | My profile
